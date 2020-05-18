@@ -1,0 +1,29 @@
+{
+  "name": "dunkmore",
+  "version": "0.0.1-alpha.0",
+  "description": "extensions for front-end web development",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/royceshayegan/ext.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/royceshayegan/ext/issues"
+  },
+  "homepage": "https://github.com/royceshayegan/ext#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-react": "^7.9.4"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "styled-components": "^5.1.0"
+  }
+}

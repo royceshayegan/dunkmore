@@ -4,7 +4,7 @@
  * If index is a number, returns the value from the values array at that index.
  * Made for use in wrapping Theme UI components with custom props.
  */
-export default function parseResponsiveProp(index, values) {
+/*export default function parseResponsiveProp(index, values) {
   let val
   if (Array.isArray(index)) {
     val = index.map(x => values[x])
@@ -12,4 +12,13 @@ export default function parseResponsiveProp(index, values) {
     val = values[index]
   }
   return val
+}*/
+export default function parseResponsiveProp(index, values) {
+	let val;
+	if (Array.isArray(index)) {
+		val = index.map(x => (typeof x === "number" ? values[x] : x));
+	} else {
+		val = typeof index === "number" ? values[index] : index;
+	}
+	return val;
 }
