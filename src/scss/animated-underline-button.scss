@@ -3,7 +3,7 @@
 .animated-underline {
   display: inline-block !important;
 
-  span {
+  span:nth-child(1) {
     display: inline-block;
 
     &:after {
@@ -25,7 +25,7 @@
   }
   &:hover,
   &.active {
-    span {
+    span:nth-child(1) {
       &:after {
         transform: scaleX(1);
       }
