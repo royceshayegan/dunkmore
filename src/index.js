@@ -1,10 +1,11 @@
-import Flex from "./layout/Flex";
-import Grid from "./layout/Grid";
-import Section from "./layout/Section";
-import Container from "./layout/Container";
-import Sheath from "./layout/Sheath";
-import Anchor from "./layout/Anchor";
-import Paragraph from "./layout/Paragraph";
+import Flex from "./prims/Flex";
+import Grid from "./prims/Grid";
+import Section from "./prims/Section";
+import Container from "./prims/Container";
+import Sheath from "./prims/Sheath";
+import Anchor from "./prims/Anchor";
+import Paragraph from "./prims/Paragraph";
+import BorderButton from "./components/BorderButton";
 import scrollToEl from "./lib/scrollToEl";
 
 export { Flex };
@@ -14,5 +15,5 @@ export { Container };
 export { Anchor };
 export { Paragraph };
 export { Sheath };
-
+export { BorderButton };
 export { scrollToEl };
