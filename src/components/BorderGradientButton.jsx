@@ -6,6 +6,7 @@ export default React.forwardRef((props, ref) => (
     ref={ref}
     as="button"
     {...props}
+    className={props.underline ? "animated-underline" : ""}
     __themeKey="buttons"
     __css={{
       fontFamily: theme =>
@@ -13,10 +14,14 @@ export default React.forwardRef((props, ref) => (
       textTransform: theme => `${theme.buttons.root.textTransform || "none"}`,
       fontSize: theme => `${theme.buttons.root.fontSize || "16px"}`,
       fontWeight: theme => `${theme.buttons.root.fontWeight || "700"}`,
-      py: 3,
-      px: 6,
+      pt: `${props.underline ? 3 : 4}`,
+      pb: `${props.underline ? 2 : 4}`,
+      px: 7,
       borderRadius: theme => `${theme.buttons.root.borderRadius || ".5em"}`,
       border: "solid 3px transparent",
+      "& > span:after": {
+        borderColor: theme => `${theme.buttons.borderGradient.underline}`,
+      },
       backgroundImage: theme => `linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
