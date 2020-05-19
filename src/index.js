@@ -5,7 +5,7 @@ import Container from "./prims/Container";
 import Sheath from "./prims/Sheath";
 import Anchor from "./prims/Anchor";
 import Paragraph from "./prims/Paragraph";
-import BorderGradientButton from "./components/BorderGradientButton";
+import BorderButton from "./components/BorderButton";
 import ButtonTest from "./components/ButtonTest";
 import scrollToEl from "./lib/scrollToEl";
 
@@ -16,6 +16,6 @@ export { Container };
 export { Anchor };
 export { Paragraph };
 export { Sheath };
-export { BorderGradientButton };
+export { BorderButton };
 export { ButtonTest };
 export { scrollToEl };
