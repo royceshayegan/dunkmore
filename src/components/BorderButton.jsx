@@ -65,6 +65,7 @@ export default React.forwardRef((props, ref) => (
       minWidth: theme => `${theme.buttons.root.minWidth || "224px"}`,
       "&:active": {
         color: theme => `${theme.buttons[props.variant].activeColor || "#fff"}`,
+        // if gradient, unset else primary
         backgroundColor: theme =>
           `${props.gradient ? "inherit" : theme.colors.primary}`,
         boxShadow: "none"
