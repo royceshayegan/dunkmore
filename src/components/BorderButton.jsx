@@ -67,7 +67,12 @@ export default React.forwardRef((props, ref) => (
         color: theme => `${theme.buttons[props.variant].activeColor || "#fff"}`,
         // if gradient, unset else primary
         backgroundColor: theme =>
-          `${props.gradient ? "inherit" : theme.colors.primary}`,
+          `${
+            props.gradient
+              ? "inherit"
+              : theme.buttons[props.variant].activeBgColor ||
+                theme.colors.primary
+          }`,
         boxShadow: "none"
       }
     }}
