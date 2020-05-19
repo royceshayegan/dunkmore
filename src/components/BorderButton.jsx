@@ -12,14 +12,14 @@ export default React.forwardRef((props, ref) => (
     __themeKey="buttons"
     __css={{
       fontFamily: theme =>
-        `${theme.buttons.root.fontFamily || theme.fonts.body}`,
-      textTransform: theme => `${theme.buttons.root.textTransform || "none"}`,
-      fontSize: theme => `${theme.buttons.root.fontSize || "16px"}`,
-      fontWeight: theme => `${theme.buttons.root.fontWeight || "700"}`,
+        `${theme.buttons.root?.fontFamily || theme.fonts.body}`,
+      textTransform: theme => `${theme.buttons.root?.textTransform || "none"}`,
+      fontSize: theme => `${theme.buttons.root?.fontSize || "16px"}`,
+      fontWeight: theme => `${theme.buttons.root?.fontWeight || "700"}`,
       pt: `${props.underline ? 3 : 4}`,
       pb: `${props.underline ? 2 : 4}`,
       px: 7,
-      borderRadius: theme => `${theme.buttons.root.borderRadius || ".5em"}`,
+      borderRadius: theme => `${theme.buttons.root?.borderRadius || ".5em"}`,
       // if gradient, unset bg else transparent
       background: theme => `${props.gradient ? "inherit" : "transparent"}`,
       // if gradient, set transparent border else primary
