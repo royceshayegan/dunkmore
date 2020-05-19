@@ -57,10 +57,11 @@ export default React.forwardRef((props, ref) => (
       appearance: "none",
       outline: "0",
       cursor: "pointer",
+      transform: "scale(1)",
       transition: theme =>
         `${
           theme.buttons[props.variant].transition ||
-          "box-shadow 250ms ease, background-color 250ms ease"
+          "box-shadow 250ms ease, background-color 250ms ease, transform 100ms ease"
         }`,
       minWidth: theme => `${theme.buttons.root.minWidth || "224px"}`,
       "&:active": {
@@ -73,6 +74,7 @@ export default React.forwardRef((props, ref) => (
               : theme.buttons[props.variant].activeBgColor ||
                 theme.colors.primary
           }`,
+        transform: "scale(.95)",
         boxShadow: "none"
       }
     }}
