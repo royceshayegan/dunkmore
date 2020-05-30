@@ -74,7 +74,7 @@ export default function Flex({
         alignItems: a,
         flexBasis: c,
         maxWidth: c || mw,
-        width: f,
+        width: f || w,
         height: h,
         maxHeight: mh,
         display: v,

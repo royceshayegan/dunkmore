@@ -12,6 +12,8 @@ const visibility = ["none", "grid"];
 
 const fill = ["auto", "100%"];
 
+const bgrepeat = ["no-repeat", "repeat"];
+
 export default function Grid({
   mw,
   w,
@@ -22,6 +24,13 @@ export default function Grid({
   a,
   v,
   l,
+  bg,
+  bgc,
+  bgi,
+  bgr,
+  bgp,
+  bgs,
+  z,
   sx,
   children,
   ...rest
@@ -31,6 +40,7 @@ export default function Grid({
   l = parseResponsiveProp(l, layout);
   v = parseResponsiveProp(v, visibility);
   f = parseResponsiveProp(f, fill);
+  bgr = parseResponsiveProp(bgr, bgrepeat);
   return (
     <Gridless
       width={w}
@@ -38,11 +48,18 @@ export default function Grid({
       sx={{
         width: f,
         maxWidth: mw,
-        gridAutoRows: h,
+        height: h,
         justifyItems: j,
         alignItems: a,
         display: v,
         position: l,
+        background: bg,
+        backgroundImage: bgi,
+        backgroundColor: bgc,
+        backgroundRepeat: bgr,
+        backgroundPosition: bgp,
+        backgroundSize: bgs,
+        zIndex: z,
         ...sx
       }}
       {...rest}

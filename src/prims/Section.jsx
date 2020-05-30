@@ -15,6 +15,7 @@ export default function Section({ l, v, f, w, mw, h, sx, children, ...rest }) {
   return (
     <Box
       as="section"
+      __themeKey="sections"
       sx={{ width: f, maxWidth: mw, height: h, display: v, position: l, ...sx }}
       {...rest}
     >
